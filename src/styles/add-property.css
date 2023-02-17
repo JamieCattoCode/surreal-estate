@@ -1,0 +1,28 @@
+.add-property {
+    padding: 10px;
+}
+
+.add-property__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-property__form > * {
+    padding: 3px;
+}
+
+add.add-property__form > label {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    padding-bottom: 2px;
+}
+
+.add-property__form > button {
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+

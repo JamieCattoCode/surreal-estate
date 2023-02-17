@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 
 const NavBar = () => (
@@ -8,8 +9,8 @@ const NavBar = () => (
       src="https://mcrcodes.s3.eu-west-2.amazonaws.com/course/surreal-estate/logo.png"
     />
     <ul className="navbar-list">
-      <li className="navbar-list-item">View Properties</li>
-      <li className="navbar-list-item">Add a Property</li>
+      <li className="navbar-list-item"><Link to="/">View Properties</Link></li>
+      <li className="navbar-list-item"><Link to="add-property">Add a Property</Link></li>
     </ul>
   </div>
 );
