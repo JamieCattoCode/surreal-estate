@@ -19,7 +19,6 @@ const AddProperty = () => {
 
   const handleAppProperty = (event) => {
     event.preventDefault();
-    console.log(fields);
     addProperty(fields);
   };
 
