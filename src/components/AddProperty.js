@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import addProperty from '../requests/addProperty';
+import Alert from './Alert';
 import '../styles/add-property.css';
 
 const AddProperty = () => {
@@ -13,13 +14,19 @@ const AddProperty = () => {
       price: 200000,
       email: 'johnsmith@gmail.com',
     },
+    alert: {
+      message: '',
+      isSuccess: false,
+    },
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
 
-  const handleAppProperty = (event) => {
+  const handleAddProperty = async (event) => {
     event.preventDefault();
-    addProperty(fields);
+    setAlert(initialState.alert);
+    addProperty(fields, setAlert);
   };
 
   const handleFieldChange = (event) => {
@@ -32,7 +39,8 @@ const AddProperty = () => {
   return (
     <div className="add-property">
       Add Property Page
-      <form className="add-property__form" onSubmit={handleAppProperty}>
+      <form className="add-property__form" onSubmit={handleAddProperty}>
+        <Alert message={alert.message} success={alert.isSuccess} />
         <label htmlFor="title">
           Title
           <div className="input-field">

@@ -1,0 +1,9 @@
+.alert-red {
+    color: rgb(201, 57, 57);
+    background-color: rgb(251, 201, 203);
+}
+
+.alert-green {
+    color: rgb(92, 181, 4);
+    background-color: rgb(225, 255, 196);
+}
