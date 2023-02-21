@@ -16,11 +16,8 @@ const Alert = ({ message, success }) => {
       </div>
     );
   }
-  return (
-    <div>
-      Hello!
-    </div>
-  );
+
+  return null;
 };
 
 Alert.propTypes = {

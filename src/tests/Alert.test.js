@@ -12,4 +12,23 @@ describe('Alert component', () => {
     const { getByText } = render(<Alert message="Success!!!" success />);
     expect(getByText(/success/i).textContent).toBe('Success!!!');
   });
+
+  it('does not render the component if message is not truthy', () => {
+    const { asFragment } = render(<Alert message="" />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('matches snapshot if message is error', () => {
+    const { getByText, asFragment } = render(<Alert message="Error!" />);
+    expect(asFragment()).toMatchSnapshot();
+    expect(getByText(/error/).textContent).toBe('Error!');
+  });
+
+  it('matches snapshot if message is success', () => {
+    const { getByText, asFragment } = render(
+      <Alert message="Success!" success />,
+    );
+    expect(asFragment()).toMatchSnapshot();
+    expect(getByText(/Success/).textContent).toBe('Success!');
+  });
 });

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert component does not render the component if message is not truthy 1`] = `
+<DocumentFragment>
+  <div>
+    Hello!
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert component matches snapshot if message is error 1`] = `
+<DocumentFragment>
+  <div
+    class="alert-red"
+  >
+    Error!
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Alert component matches snapshot if message is success 1`] = `
+<DocumentFragment>
+  <div
+    class="alert-green"
+  >
+    Success!
+  </div>
+</DocumentFragment>
+`;
