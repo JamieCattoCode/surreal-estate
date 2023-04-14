@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import addProperty from '../requests/addProperty';
 import Alert from './Alert';
-import PropertyCard from './PropertyCard';
 import '../styles/add-property.css';
 
 const AddProperty = () => {

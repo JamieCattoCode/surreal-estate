@@ -1,0 +1,8 @@
+.sidebar {
+    border-style: solid;
+    border-color: blue;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+}

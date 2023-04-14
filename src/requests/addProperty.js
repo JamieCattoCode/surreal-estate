@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const addProperty = (data, setAlert) => {
   axios
-    .post('http://localhost:3000/api/v1/PropertyListing', data)
+    .post('http://localhost:4000/api/v1/PropertyListing', data)
     .then(() => {
       setAlert({ isSuccess: true, message: 'Property added!' });
     })

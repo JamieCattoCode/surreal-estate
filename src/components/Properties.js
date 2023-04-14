@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PropertyCard from './PropertyCard';
 import Alert from './Alert';
+import SideBar from './SideBar';
 import '../styles/properties.css';
 
 const Properties = () => {
@@ -18,7 +19,7 @@ const Properties = () => {
   const [alert, setAlert] = useState(initialState.alert);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/v1/PropertyListing')
+    axios.get('http://localhost:4000/api/v1/PropertyListing')
       .then(({ data }) => {
         setProperties(data);
       })
@@ -33,12 +34,17 @@ const Properties = () => {
   return (
     <div className="properties">
       <Alert message={alert.message} success={alert.isSuccess} />
-      {properties.map((property) => (
-        <PropertyCard
-          key={property._id}
-          {...property}
-        />
-      ))}
+      <div className="properties__container">
+        <SideBar />
+        <div className="properties__items">
+          {properties.map((property) => (
+            <PropertyCard
+              key={property._id}
+              {...property}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

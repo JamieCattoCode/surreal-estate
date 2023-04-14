@@ -1,4 +1,9 @@
-.properties {
-    display: flex;
-    padding: 5px;
+.properties__container {
+    display: grid;
+    grid-template-columns: minmax(50px, 10vw) auto;
 }
+
+.properties__items > * {
+    padding: .5rem;
+}
+
